@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://161.35.101.255/api/fetch-all-data/"; // Replace with your actual backend URL
+const API_URL = "https://mywebprofile.site/api/fetch-all-data/"; // Replace with your actual backend URL
 
 export const fetchData = async () => {
   try {
