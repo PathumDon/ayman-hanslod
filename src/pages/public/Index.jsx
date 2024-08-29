@@ -36,7 +36,7 @@ const Index = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const url = "https://161.35.101.255";
+  const url = "https://mywebprofile.site/";
   const addMessage = (e) => {
     e.preventDefault();
     api
