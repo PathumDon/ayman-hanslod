@@ -41,6 +41,7 @@ function RegisterAndLogout() {
   return <Register />;
 }
 function App() {
+  const mainPath = "/admin-backend";
   return (
     <BrowserRouter>
       <Routes>
@@ -67,7 +68,7 @@ function App() {
             }
           />
           <Route
-            path="/admin-backend"
+            path={mainPath}
             element={
               <ProtectedRoute>
                 <HomePage />
@@ -75,7 +76,7 @@ function App() {
             }
           />
           <Route
-            path="/admin-backend/index"
+            path={`${mainPath}/index`}
             element={
               <ProtectedRoute>
                 <HomePage />
@@ -83,7 +84,7 @@ function App() {
             }
           />
           <Route
-            path="/admin-backend/personal-info"
+            path={`${mainPath}/personal-info`}
             element={
               <ProtectedRoute>
                 <PersonalInfoPage />
