@@ -28,11 +28,10 @@ const AddAchievement = () => {
   return (
     <>
       <section className="bg-indigo-50">
-        <div className="flex flex-col items-center md:px-20 md:py-24">
-          <div className="bg-white px-10 py-8 mb-4 shadow-md rounded-xl border md:m-0 w-full max-w-full md:max-w-3xl">
+        <div className="flex flex-col items-center md:px-20 md:py-24 p-6">
+          <div className="bg-white px-8 py-8 mb-4 shadow-md rounded-xl border md:m-0 w-full max-w-full md:max-w-3xl">
             <form className="space-y-4" onSubmit={createAchievement}>
               <h1 className="text-3xl font-bold text-center mb-10">
-                {" "}
                 Add Achievement
               </h1>
               <a href=""></a>

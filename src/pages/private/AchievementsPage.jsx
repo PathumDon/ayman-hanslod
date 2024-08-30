@@ -43,7 +43,7 @@ const Achievements = () => {
   return (
     <>
       <section>
-        <div className="container md:px-0 px-14 max-w-screen-xl mx-auto text-center pt-12">
+        <div className="container md:px-0 px-8 max-w-screen-xl mx-auto text-center pt-12">
           <div className="flex space-x-8 items-center">
             <h1 className="md:text-4xl text-2xl">Achievements</h1>
             <a

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import api from "../../utils/api";
+import { toast } from "react-toastify";
 
 const EditPersonalInfoPage = () => {
   const navigate = useNavigate();
@@ -31,11 +32,10 @@ const EditPersonalInfoPage = () => {
       setPhone(res.data.phone);
       setEmail(res.data.email);
       setAbout(res.data.about);
-      setLogo(res.data.logo);
-      setHeroImage(res.data.hero_image);
-      setAboutImage(res.data.about_image);
-      setDocument(res.data.file);
-      setOldHeroImage(res.data.hero_image);
+      // setLogo(res.data.logo.name);
+      // setHeroImage(res.data.hero_image.name);
+      // setAboutImage(res.data.about_image.name);
+      // setDocument(res.data.file.name);
 
       setLoading(false);
     });
@@ -43,6 +43,10 @@ const EditPersonalInfoPage = () => {
 
   const updatePersonalInfo = (e) => {
     e.preventDefault();
+    console.log(logo);
+    console.log(hero_image);
+    console.log(about_image);
+    console.log(file);
     api
 
       .put(
@@ -68,13 +72,13 @@ const EditPersonalInfoPage = () => {
       )
       .then((res) => {
         if (res.status === 200) {
-          alert("Personal info updated successfully!");
+          toast.success("Personal info updated successfully!");
           navigate("/admin-backend/personal-info");
         } else {
-          alert("Failed to update personal info.");
+          toast.error("Failed to update personal info.");
         }
       })
-      .catch((err) => alert("Error: " + err));
+      .catch((err) => toast.error(err));
   };
   return (
     <>
@@ -234,7 +238,6 @@ const EditPersonalInfoPage = () => {
                   <span
                     id="logoFileName"
                     className="ml-3 text-lg text-gray-500"
-                    placeholder="ttt"
                   >
                     {logo ? logo.name : "No file chosen"}
                   </span>

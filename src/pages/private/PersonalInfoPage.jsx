@@ -27,7 +27,7 @@ const PersonalInfo = () => {
   return (
     <>
       <section>
-        <div className="container md:px-0 px-14 max-w-screen-xl mx-auto text-center pt-12">
+        <div className="container md:px-0 px-8 max-w-screen-xl mx-auto text-center pt-12">
           <div className="flex space-x-6">
             <h1 className="md:text-4xl text-2xl">Personal Info</h1>
             <button

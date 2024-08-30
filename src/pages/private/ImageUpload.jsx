@@ -70,9 +70,9 @@ const ImageUpload = () => {
   if (loading) return <Spinner />;
   return (
     <>
-      <section className="bg-indigo-50">
-        <div className="flex flex-col items-center md:px-20 md:py-24">
-          <div className="bg-white px-10 py-8 mb-4 shadow-md rounded-xl border md:m-0 w-full max-w-full md:max-w-3xl">
+      <section className="">
+        <div className="flex flex-col items-center md:px-20 md:py-24 m-6">
+          <div className="bg-white px-10 py-8 mb-4 shadow-md rounded-xl border md:m-0  w-full max-w-full md:max-w-3xl">
             <form className="space-y-4" onSubmit={handleSubmit}>
               <h1 className="text-3xl font-bold text-center mb-10">
                 Upload Image
@@ -162,7 +162,7 @@ const ImageUpload = () => {
       </section>
 
       <section>
-        <div className="grid grid-cols-2 md:grid-cols-8 gap-4 max-w-6xl mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-8 gap-4 max-w-6xl md:mx-auto m-8">
           {images.map((image) => (
             <div
               key={image.id}

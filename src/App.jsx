@@ -214,7 +214,7 @@ function App() {
             }
           />
           <Route
-            path={`${mainPath}/color-picker`}
+            path={`${mainPath}/theme`}
             element={
               <ProtectedRoute>
                 <ColorPickerPage />

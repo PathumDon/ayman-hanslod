@@ -48,7 +48,7 @@ const HomePage = () => {
   ];
   return (
     <>
-      <div className="py-24 px-8 md:max-w-5xl mx-auto flex gap-12">
+      <div className="py-24 px-8 md:max-w-screen-lg mx-auto flex gap-12">
         <ul className="">
           {sections.map((section, index) => (
             <li key={index}>

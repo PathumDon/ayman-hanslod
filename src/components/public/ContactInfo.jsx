@@ -1,6 +1,6 @@
 import React from "react";
 
-const ContactInfo = ({ icon, title, content, href }) => {
+const ContactInfo = ({ icon, title, content, href, primaryColor }) => {
   const icons = {
     telephone: (
       <svg
@@ -43,20 +43,30 @@ const ContactInfo = ({ icon, title, content, href }) => {
 
   return (
     <>
-      <div className="flex items-center">
-        <div className="rounded-full p-4 text-white font-bold block bg-red-500">
-          {icons[icon]}
-        </div>
+      <div
+        style={{
+          "--primary-color": primaryColor,
+          // "--secondary-color": secondaryColor,
+          // "--accent-color": accentColor,
+        }}
+      >
+        <div className="flex items-center">
+          <div className="rounded-full p-4 text-white font-bold block bg-[var(--primary-color)]">
+            {icons[icon]}
+          </div>
 
-        <div className="flex-col ml-10 text-left">
-          <div className="md:text-2xl text-lg font-semibold mb-4">{title}</div>
-          {href ? (
-            <a className="md:text-xl text-md" href={href}>
-              {content}
-            </a>
-          ) : (
-            <div className="md:text-xl text-md">{content}</div>
-          )}
+          <div className="flex-col ml-10 text-left">
+            <div className="md:text-2xl text-lg font-semibold mb-4">
+              {title}
+            </div>
+            {href ? (
+              <a className="md:text-xl text-md" href={href}>
+                {content}
+              </a>
+            ) : (
+              <div className="md:text-xl text-md">{content}</div>
+            )}
+          </div>
         </div>
       </div>
     </>
