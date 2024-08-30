@@ -92,7 +92,7 @@ function App() {
             }
           />
           <Route
-            path="/admin-backend/personal-info/add"
+            path={`${mainPath}/personal-info/add`}
             element={
               <ProtectedRoute>
                 <AddPersonalInfo />
@@ -100,7 +100,7 @@ function App() {
             }
           />
           <Route
-            path="/admin-backend/personal-info/edit/:id"
+            path={`${mainPath}/personal-info/edit/:id`}
             element={
               <ProtectedRoute>
                 <EditPersonalInfoPage />
@@ -108,7 +108,7 @@ function App() {
             }
           />
           <Route
-            path="/admin-backend/achievements"
+            path={`${mainPath}/achievements`}
             element={
               <ProtectedRoute>
                 <Achievements />
@@ -116,7 +116,7 @@ function App() {
             }
           />
           <Route
-            path="/admin-backend/achievements/add"
+            path={`${mainPath}/achievements/add`}
             element={
               <ProtectedRoute>
                 <AddAchievement />
@@ -125,7 +125,7 @@ function App() {
           />
 
           <Route
-            path="/admin-backend/achievements/update/:id"
+            path={`${mainPath}/achievements/update/:id`}
             element={
               <ProtectedRoute>
                 <EditAchievement />
@@ -134,7 +134,7 @@ function App() {
           />
 
           <Route
-            path="/admin-backend/education"
+            path={`${mainPath}/education`}
             element={
               <ProtectedRoute>
                 <EducationPage />
@@ -143,7 +143,7 @@ function App() {
           />
 
           <Route
-            path="/admin-backend/education/add"
+            path={`${mainPath}/education/add`}
             element={
               <ProtectedRoute>
                 <AddEducationPage />
@@ -152,7 +152,7 @@ function App() {
           />
 
           <Route
-            path="/admin-backend/education/edit/:id"
+            path={`${mainPath}/education/edit/:id`}
             element={
               <ProtectedRoute>
                 <EditEducationPage />
@@ -161,7 +161,7 @@ function App() {
           />
 
           <Route
-            path="/admin-backend/experiance"
+            path={`${mainPath}/experiance`}
             element={
               <ProtectedRoute>
                 <ExperiancePage />
@@ -170,7 +170,7 @@ function App() {
           />
 
           <Route
-            path="/admin-backend/experiance/add"
+            path={`${mainPath}/experiance/add`}
             element={
               <ProtectedRoute>
                 <AddExperiancePage />
@@ -179,7 +179,7 @@ function App() {
           />
 
           <Route
-            path="/admin-backend/experiance/edit/:id"
+            path={`${mainPath}/experiance/edit/:id`}
             element={
               <ProtectedRoute>
                 <EditExperiancePage />
@@ -188,7 +188,7 @@ function App() {
           />
 
           <Route
-            path="/admin-backend/social-links"
+            path={`${mainPath}/social-links`}
             element={
               <ProtectedRoute>
                 <SocialLinksPage />
@@ -197,7 +197,7 @@ function App() {
           />
 
           <Route
-            path="/admin-backend/social-links/add"
+            path={`${mainPath}/social-links/add`}
             element={
               <ProtectedRoute>
                 <AddSocialLinkPage />
@@ -206,7 +206,7 @@ function App() {
           />
 
           <Route
-            path="/admin-backend/social-links/edit/:id"
+            path={`${mainPath}/social-links/edit/:id`}
             element={
               <ProtectedRoute>
                 <EditSocialLinkPage />
@@ -214,7 +214,7 @@ function App() {
             }
           />
           <Route
-            path="/admin-backend/color-picker"
+            path={`${mainPath}/color-picker`}
             element={
               <ProtectedRoute>
                 <ColorPickerPage />
@@ -223,7 +223,7 @@ function App() {
           />
 
           <Route
-            path="/admin-backend/skills"
+            path={`${mainPath}/skills`}
             element={
               <ProtectedRoute>
                 <SkillsPage />
@@ -232,7 +232,7 @@ function App() {
           />
 
           <Route
-            path="/admin-backend/skills/add"
+            path={`${mainPath}/skills/add`}
             element={
               <ProtectedRoute>
                 <AddSkillPage />
@@ -241,7 +241,7 @@ function App() {
           />
 
           <Route
-            path="/admin-backend/skills/edit/:id"
+            path={`${mainPath}/skills/edit/:id`}
             element={
               <ProtectedRoute>
                 <EditSkillPage />
@@ -249,7 +249,7 @@ function App() {
             }
           />
           <Route
-            path="/admin-backend/gallery"
+            path={`${mainPath}/gallery`}
             element={
               <ProtectedRoute>
                 <ImageUpload />
@@ -257,7 +257,7 @@ function App() {
             }
           />
           <Route
-            path="/admin-backend/messages"
+            path={`${mainPath}/messages`}
             element={
               <ProtectedRoute>
                 <MessagesPage />
@@ -265,7 +265,7 @@ function App() {
             }
           />
 
-          <Route path="/admin-backend/*" element={<NoteFound />} />
+          <Route path={`${mainPath}/*`} element={<NoteFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
