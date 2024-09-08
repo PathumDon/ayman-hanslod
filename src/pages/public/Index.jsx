@@ -39,7 +39,7 @@ const Index = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const url = "http://user3.local:8000/"; //"https://mywebprofile.site/";
+  const url = "https://mywebprofile.site/";
   const addMessage = (e) => {
     e.preventDefault();
     api
