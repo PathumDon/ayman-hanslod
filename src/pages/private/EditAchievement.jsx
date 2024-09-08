@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import api from "../../utils/api";
+import { toast } from "react-toastify";
 
 const EditAchievement = () => {
   const navigate = useNavigate();
@@ -36,10 +37,10 @@ const EditAchievement = () => {
       .put(`/api/achievements/update/${id}/`, { achievement, description })
       .then((res) => {
         if (res.status === 200) {
-          alert("Achievement updated successfully!");
+          toast.success("Achievement updated successfully!");
           navigate("/admin-backend/achievements");
         } else {
-          alert("Failed to update achievement.");
+          toast.error("Failed to update achievement.");
         }
       })
       .catch((err) => alert("Error: " + err));

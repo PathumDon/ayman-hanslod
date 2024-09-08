@@ -1,5 +1,7 @@
+import Login from "../components/private/Login";
+
 function Register() {
-  return <Form route="/api/user/register/" method="register" />;
+  return <Login route="/api/user/register/" method="register" />;
 }
 
 export default Register;

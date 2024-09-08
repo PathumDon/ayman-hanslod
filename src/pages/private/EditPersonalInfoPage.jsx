@@ -43,10 +43,7 @@ const EditPersonalInfoPage = () => {
 
   const updatePersonalInfo = (e) => {
     e.preventDefault();
-    console.log(logo);
-    console.log(hero_image);
-    console.log(about_image);
-    console.log(file);
+
     api
 
       .put(

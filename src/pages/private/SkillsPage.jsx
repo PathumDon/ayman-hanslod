@@ -80,7 +80,7 @@ const SkillsPage = () => {
                       type="button"
                       id="add-skill"
                       className="mt-1 ml-4 inline-flex items-center px-4 py-1 text-xs font-medium rounded-md shadow-sm text-white bg-red-500 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                      onClick={() => deleteLinks(skill.id)}
+                      onClick={() => deleteSkills(skill.id)}
                     >
                       Delete
                     </button>

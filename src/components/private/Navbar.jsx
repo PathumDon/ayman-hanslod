@@ -12,7 +12,6 @@ const Navbar = () => {
 
   const toggle = () => {
     setMenu(!menu);
-    console.log(menu);
   };
 
   return (
@@ -27,7 +26,7 @@ const Navbar = () => {
               >
                 {/* <img className="h-10 w-auto" src={logo} alt="React Jobs" /> */}
                 <span className="md:block text-white text-2xl font-bold ml-2">
-                  Back End
+                  Settings
                 </span>
               </NavLink>
 

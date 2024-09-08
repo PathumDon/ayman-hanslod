@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { ACCESS_TOKEN, REFRESH_TOKEN } from "../../utils/constants";
 import LoadingIndicator from "../../components/private/LoadingIndicator";
+import { toast } from "react-toastify";
 import "../../index.css";
 
 function LoginPage({ route, method }) {
@@ -24,10 +25,11 @@ function LoginPage({ route, method }) {
         localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
         navigate("/admin-backend/index");
       } else {
+        toast.error("Invalid user name or password");
         navigate("/admin-backend/login");
       }
     } catch (error) {
-      alert(error);
+      alert("Invalid username or password");
     } finally {
       setLoading(false);
     }
@@ -44,8 +46,8 @@ function LoginPage({ route, method }) {
                 to="/admin-backend"
               >
                 {/* <img className="h-10 w-auto" src={logo} alt="React Jobs" /> */}
-                <span className="hidden md:block text-white text-2xl font-bold ml-2">
-                  Back End
+                <span className=" text-white text-2xl font-bold ml-2">
+                  My Web Profile
                 </span>
               </NavLink>
             </div>

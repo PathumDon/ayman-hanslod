@@ -19,7 +19,6 @@ const SocialLinksPage = () => {
       .then((data) => {
         setPlatforms(data);
         setLoading(false);
-        console.log(data);
       })
       .catch((err) => toast.error(err));
   };

@@ -9,6 +9,7 @@ import Achievements from "./AchievementsPage";
 import SocialLinksPage from "./SocialLinksPage";
 import ImageUpload from "./ImageUpload";
 import SkillsPage from "./SkillsPage";
+import MessagesPage from "./MessagesPage";
 
 const HomePage = () => {
   const [expanded, setExpanded] = useState(null);
@@ -44,6 +45,11 @@ const HomePage = () => {
     {
       section: "Skills",
       details: <SkillsPage />,
+    },
+
+    {
+      section: "Messages",
+      details: <MessagesPage />,
     },
   ];
   return (

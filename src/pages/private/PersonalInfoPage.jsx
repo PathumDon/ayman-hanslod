@@ -19,7 +19,6 @@ const PersonalInfo = () => {
       .then((data) => {
         setPersonalInfo(data);
         setLoading(false);
-        console.log(data);
       })
       .catch((err) => alert(err));
   };

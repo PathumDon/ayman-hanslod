@@ -50,7 +50,6 @@ const ImageUpload = () => {
       .then((data) => {
         setImages(data);
         setLoading(false);
-        console.log(data);
       });
   };
 

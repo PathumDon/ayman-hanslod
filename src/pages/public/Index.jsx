@@ -39,7 +39,7 @@ const Index = () => {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const url = "https://mywebprofile.site/";
+  const url = "http://user3.local:8000/"; //"https://mywebprofile.site/";
   const addMessage = (e) => {
     e.preventDefault();
     api
@@ -94,7 +94,7 @@ const Index = () => {
       setPersonalInfo(data.personal);
       setSkills(data.skills);
       setEducation(data.education);
-      setAchivements(data.achivements);
+      setAchivements(data.achievements);
       setExperiences(data.experience);
       setSocials(data.socials);
       setTheme(data.colors);
@@ -125,14 +125,20 @@ const Index = () => {
             {/* Nav bar */}
             <nav className="container flex md:px-0 px-14 max-w-screen-xl mx-auto items-center justify-between font-bold bg-white">
               <div className="logo text-3xl text-[var(--primary-color)]">
-                <a href="http://localhost:5173/">Pathum Don</a>
+                <a href="/">
+                  <img
+                    src={`${url}/media/${personal_info[0].logo}`}
+                    alt=""
+                    className="h-10"
+                  />
+                </a>
               </div>
 
               <div className="md:flex text-[var(--secondary-color)] text-md space-x-6 hidden">
                 <div className="group">
                   <a
                     className="hover:text-[var(--primary-color)] px-3"
-                    href="http://localhost:5173/"
+                    href="/"
                   >
                     Home
                   </a>
@@ -195,7 +201,7 @@ const Index = () => {
                 }`}
               >
                 <a
-                  href="http://localhost:5173/index"
+                  href="/index"
                   className="hover:text-[var(--primary-color)]"
                   onClick={toggle}
                 >
@@ -266,12 +272,17 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="bg-[var(--primary-color)] rounded-full w-[300px] h-[300px] relative md:flex-none hidden md:block">
-                <img
+              <div
+                className="rounded-full w-[300px] h-[300px] bg-cover bg-center relative md:flex-none hidden md:block"
+                style={{
+                  backgroundImage: `url(${url}/media/${personal_info[0].hero_image})`,
+                }}
+              >
+                {/* <img
                   className="hidden md:block  bg-top bg-no-repeat bg-local w-[300px] absolute top-12"
                   src={`${url}/media/${personal_info[0].hero_image}`}
                   alt=""
-                />
+                /> */}
               </div>
             </div>
           </div>
@@ -315,12 +326,13 @@ const Index = () => {
               </div>
 
               {/* <h4 className="text-gray-800 font-semibold text-xl">Social</h4> */}
-              {console.log(socials)}
+
               <div className="flex flex-row space-x-16 text-gray-600 pt-10">
                 {socials.map((social) => (
                   <div key={social.id}>
                     <a
-                      href={socials.link}
+                      target="_blank"
+                      href={social.link}
                       className="hover:text-[var(--primary-color)] hover:scale-105 duration-100 text-4xl"
                     >
                       {
@@ -355,7 +367,7 @@ const Index = () => {
                   </div>
                   <div className="w-full bg-white rounded-full h-2.5 mb-4">
                     <div
-                      className="bg-blue-600 h-2.5 rounded-full "
+                      className="bg-[var(--primary-color)] h-2.5 rounded-full "
                       style={{ width: `${skill.proficiency}%` }}
                     ></div>
                   </div>
@@ -599,9 +611,67 @@ const Index = () => {
             </div>
           </div>
 
-          <footer className="bg-gray-900 mt-10">
-            <div className="font-bold text-center text-white py-10">
-              &copy; 2024 pathum.online All rights reserved
+          <footer className="bg-gray-900 mt-14 pt-14 text-center">
+            <nav className="flex px-14 mx-auto items-center justify-center font-bold text-sm">
+              <div className="flex text-gray-300 text-md space-x-4">
+                <div className="group">
+                  <a
+                    className="hover:text-[var(--primary-color)] px-3"
+                    href="/"
+                  >
+                    Home
+                  </a>
+                </div>
+                <div className="group">
+                  <a
+                    className="hover:text-[var(--primary-color)] px-3"
+                    href="#intro"
+                  >
+                    About
+                  </a>
+                </div>
+                <div className="group">
+                  <a
+                    className="hover:text-[var(--primary-color)] px-3"
+                    href="#qualification"
+                  >
+                    Qualification
+                  </a>
+                </div>
+                <div className="group">
+                  <a
+                    className="hover:text-[var(--primary-color)] px-3"
+                    href="#achievement"
+                  >
+                    Achievement
+                  </a>
+                </div>
+
+                <div className="md:block hidden group">
+                  <a
+                    className="hover:text-[var(--primary-color)] px-3"
+                    href="#contact"
+                  >
+                    Contact Me
+                  </a>
+                </div>
+              </div>
+            </nav>
+            <div className="flex flex-row space-x-8 text-gray-400 pt-10 justify-center">
+              {socials.map((social) => (
+                <div key={social.id}>
+                  <a
+                    target="_blank"
+                    href={social.link}
+                    className="hover:text-[var(--primary-color)] hover:scale-105 duration-100 text-2xl"
+                  >
+                    {socialIcons.find((item) => item.name === social.name).icon}
+                  </a>
+                </div>
+              ))}
+            </div>
+            <div className="font-bold text-center text-gray-400 pt-10 text-sm pb-14">
+              &copy; 2024 pathumchathuranga.com All rights reserved
             </div>
           </footer>
         </section>

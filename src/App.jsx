@@ -63,7 +63,7 @@ function App() {
             path="/register"
             element={
               <ProtectedRoute>
-                <NoteFound />
+                <Register />
               </ProtectedRoute>
             }
           />

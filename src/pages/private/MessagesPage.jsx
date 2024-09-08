@@ -17,19 +17,18 @@ const MessagesPage = () => {
       .then((res) => res.data)
       .then((data) => {
         setMessages(data);
-        console.log(data);
         setLoading(false);
       })
       .catch((err) => toast.success(err));
   };
 
-  const deleteMessages = () => {
+  const deleteMessages = (id) => {
     api
-      .delete(`/api/messages/${id}`)
+      .delete(`/api/messages/${id}/`)
       .then((res) => {
         if (res.status === 204) {
-          toast.success("message deleted");
           getMessages();
+          toast.success("message deleted");
         } else {
           toast.error("failed to delete");
         }
