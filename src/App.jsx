@@ -41,7 +41,7 @@ function RegisterAndLogout() {
   return <Register />;
 }
 function App() {
-  const mainPath = "/admin-backend";
+  const mainPath = "/backend";
   return (
     <BrowserRouter>
       <Routes>

@@ -23,10 +23,10 @@ function LoginPage({ route, method }) {
       if (method === "login") {
         localStorage.setItem(ACCESS_TOKEN, res.data.access);
         localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
-        navigate("/admin-backend/index");
+        navigate("/backend/index");
       } else {
         toast.error("Invalid user name or password");
-        navigate("/admin-backend/login");
+        navigate("/backend/login");
       }
     } catch (error) {
       alert("Invalid username or password");
@@ -43,7 +43,7 @@ function LoginPage({ route, method }) {
             <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
               <NavLink
                 className="flex flex-shrink-0 items-center mr-4"
-                to="/admin-backend"
+                to="/backend"
               >
                 {/* <img className="h-10 w-auto" src={logo} alt="React Jobs" /> */}
                 <span className=" text-white text-2xl font-bold ml-2">
@@ -91,7 +91,7 @@ function LoginPage({ route, method }) {
             <div className="text-center mt-6">
               <a
                 className="text-gray-400 hover:text-blue-500 "
-                href="/admin-backend/forgot-password"
+                href="/backend/forgot-password"
               >
                 Forgot Password
               </a>

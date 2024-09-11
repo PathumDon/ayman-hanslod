@@ -38,7 +38,7 @@ const EditAchievement = () => {
       .then((res) => {
         if (res.status === 200) {
           toast.success("Achievement updated successfully!");
-          navigate("/admin-backend/achievements");
+          navigate("/backend/achievements");
         } else {
           toast.error("Failed to update achievement.");
         }
@@ -101,7 +101,7 @@ const EditAchievement = () => {
               <button
                 type="button"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-500 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
-                onClick={() => navigate("/admin-backend/achievements")}
+                onClick={() => navigate("/backend/achievements")}
               >
                 Cancel
               </button>

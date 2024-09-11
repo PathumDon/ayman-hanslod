@@ -22,7 +22,7 @@ const Navbar = () => {
             <div className="flex flex-1 items-center justify-between">
               <NavLink
                 className="flex flex-shrink-0 items-center mr-4 "
-                to="/admin-backend/index"
+                to="/backend/index"
               >
                 {/* <img className="h-10 w-auto" src={logo} alt="React Jobs" /> */}
                 <span className="md:block text-white text-2xl font-bold ml-2">
@@ -32,45 +32,36 @@ const Navbar = () => {
 
               <div className="md:ml-auto">
                 <div className="md:flex space-x-2 hidden">
-                  <NavLink to="/admin-backend/index" className={linkClass}>
+                  <NavLink to="/backend/index" className={linkClass}>
                     Home
                   </NavLink>
-                  <NavLink
-                    to="/admin-backend/personal-info"
-                    className={linkClass}
-                  >
+                  <NavLink to="/backend/personal-info" className={linkClass}>
                     Personal Info
                   </NavLink>
-                  <NavLink to="/admin-backend/education" className={linkClass}>
+                  <NavLink to="/backend/education" className={linkClass}>
                     Education
                   </NavLink>
-                  <NavLink to="/admin-backend/experiance" className={linkClass}>
+                  <NavLink to="/backend/experiance" className={linkClass}>
                     Experience
                   </NavLink>
 
-                  <NavLink
-                    to="/admin-backend/achievements"
-                    className={linkClass}
-                  >
+                  <NavLink to="/backend/achievements" className={linkClass}>
                     Achievements
                   </NavLink>
 
-                  <NavLink
-                    to="/admin-backend/social-links"
-                    className={linkClass}
-                  >
+                  <NavLink to="/backend/social-links" className={linkClass}>
                     Social Links
                   </NavLink>
-                  <NavLink to="/admin-backend/gallery" className={linkClass}>
+                  <NavLink to="/backend/gallery" className={linkClass}>
                     Gallery
                   </NavLink>
-                  <NavLink to="/admin-backend/skills" className={linkClass}>
+                  <NavLink to="/backend/skills" className={linkClass}>
                     Skills
                   </NavLink>
-                  <NavLink to="/admin-backend/theme" className={linkClass}>
+                  <NavLink to="/backend/theme" className={linkClass}>
                     Theme
                   </NavLink>
-                  <NavLink to="/admin-backend/messages" className={linkClass}>
+                  <NavLink to="/backend/messages" className={linkClass}>
                     Messages
                   </NavLink>
 
@@ -109,7 +100,7 @@ const Navbar = () => {
               <div className="w-full">
                 <div className="flex flex-col text-center mt-4">
                   <NavLink
-                    to="/admin-backend/index"
+                    to="/backend/index"
                     className={linkClass}
                     onClick={toggle}
                   >
@@ -117,20 +108,20 @@ const Navbar = () => {
                   </NavLink>
                   <NavLink
                     onClick={toggle}
-                    to="/admin-backend/personal-info"
+                    to="/backend/personal-info"
                     className={linkClass}
                   >
                     Personal Info
                   </NavLink>
                   <NavLink
-                    to="/admin-backend/education"
+                    to="/backend/education"
                     className={linkClass}
                     onClick={toggle}
                   >
                     Education
                   </NavLink>
                   <NavLink
-                    to="/admin-backend/experiance"
+                    to="/backend/experiance"
                     className={linkClass}
                     onClick={toggle}
                   >
@@ -138,7 +129,7 @@ const Navbar = () => {
                   </NavLink>
 
                   <NavLink
-                    to="/admin-backend/achievements"
+                    to="/backend/achievements"
                     onClick={toggle}
                     className={linkClass}
                   >
@@ -146,35 +137,35 @@ const Navbar = () => {
                   </NavLink>
 
                   <NavLink
-                    to="/admin-backend/social-links"
+                    to="/backend/social-links"
                     onClick={toggle}
                     className={linkClass}
                   >
                     Social Links
                   </NavLink>
                   <NavLink
-                    to="/admin-backend/gallery"
+                    to="/backend/gallery"
                     className={linkClass}
                     onClick={toggle}
                   >
                     Gallery
                   </NavLink>
                   <NavLink
-                    to="/admin-backend/skills"
+                    to="/backend/skills"
                     className={linkClass}
                     onClick={toggle}
                   >
                     Skills
                   </NavLink>
                   <NavLink
-                    to="/admin-backend/theme"
+                    to="/backend/theme"
                     className={linkClass}
                     onClick={toggle}
                   >
                     Theme
                   </NavLink>
                   <NavLink
-                    to="/admin-backend/messages"
+                    to="/backend/messages"
                     className={linkClass}
                     onClick={toggle}
                   >
@@ -182,7 +173,7 @@ const Navbar = () => {
                   </NavLink>
 
                   <NavLink
-                    to="/admin-backend/logout"
+                    to="/backend/logout"
                     onClick=""
                     className={linkClass}
                   >

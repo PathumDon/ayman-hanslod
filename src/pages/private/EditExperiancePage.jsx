@@ -39,7 +39,7 @@ const EditExperiancePage = () => {
       .then((res) => {
         if (res.status === 200) {
           toast.success("Item successfuly updated");
-          navigate("/admin-backend/experiance");
+          navigate("/backend/experiance");
         } else {
           toast.error("Failed to update item");
         }
@@ -166,7 +166,7 @@ const EditExperiancePage = () => {
                 <button
                   type="button"
                   id="add-experiance"
-                  onClick={() => navigate("/admin-backend/experiance/")}
+                  onClick={() => navigate("/backend/experiance/")}
                   className="mt-2 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-400 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Cancel

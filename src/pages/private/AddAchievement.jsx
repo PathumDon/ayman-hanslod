@@ -19,7 +19,7 @@ const AddAchievement = () => {
           toast.success("Achievement added successfuly");
           setAchievement("");
           setDescription("");
-          navigate("/admin-backend/achievements");
+          navigate("/backend/achievements");
         } else toast.error("Failed to make achivements.");
       })
       .catch((err) => toast.error(err));
@@ -80,7 +80,7 @@ const AddAchievement = () => {
                 <button
                   type="button"
                   id="add-skill"
-                  onClick={() => navigate("/admin-backend/achievements/")}
+                  onClick={() => navigate("/backend/achievements/")}
                   className="mt-2 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-400 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Cancel

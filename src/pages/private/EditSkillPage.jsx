@@ -89,7 +89,7 @@ const EditSkillPage = () => {
                 <button
                   type="button"
                   id="cancel"
-                  onClick={() => navigate("/admin-backend/skills")}
+                  onClick={() => navigate("/backend/skills")}
                   className="ml-4 mt-2 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-400 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Cancel

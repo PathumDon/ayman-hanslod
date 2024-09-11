@@ -68,7 +68,7 @@ const PersonalInfo = () => {
           setLogo("");
           setHeroImage("");
           setAboutImage("");
-          navigate("/admin-backend/personal-info");
+          navigate("/backend/personal-info");
         } else toast.error("Failed to add user info.");
       })
       .catch((err) => alert(err));

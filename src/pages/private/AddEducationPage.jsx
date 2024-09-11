@@ -18,7 +18,7 @@ const AddEducationPage = () => {
           toast.success("Education details added successfuly");
           setTitle("");
           setInstitute("");
-          navigate("/admin-backend/education");
+          navigate("/backend/education");
         } else {
           toast.error("Education details failed to add");
         }
@@ -99,7 +99,7 @@ const AddEducationPage = () => {
                 <button
                   type="button"
                   id="add-skill"
-                  onClick={() => navigate("/admin-backend/achievements/")}
+                  onClick={() => navigate("/backend/achievements/")}
                   className="mt-2 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-400 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Cancel

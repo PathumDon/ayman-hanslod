@@ -38,7 +38,7 @@ const EditEducationPage = () => {
       .then((res) => {
         if (res.status === 200) {
           toast.success("Successfuly edit the details");
-          navigate("/admin-backend/education");
+          navigate("/backend/education");
         } else {
           toast.error("Failed to edit the details");
         }
@@ -120,7 +120,7 @@ const EditEducationPage = () => {
                 <button
                   type="button"
                   id="add-skill"
-                  onClick={() => navigate("/admin-backend/education/")}
+                  onClick={() => navigate("/backend/education/")}
                   className="mt-2 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gray-400 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   Cancel

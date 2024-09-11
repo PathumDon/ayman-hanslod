@@ -43,7 +43,7 @@ const SocialLinksPage = () => {
             <h1 className="md:text-4xl text-2xl">Social Platforms</h1>
             <a
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-              href="/admin-backend/social-links/add"
+              href="/backend/social-links/add"
             >
               Add New
             </a>
@@ -71,9 +71,7 @@ const SocialLinksPage = () => {
                     id="add-skill"
                     className="mt-1 inline-flex items-center px-4 py-1 text-xs font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     onClick={() =>
-                      navigate(
-                        `/admin-backend/social-links/edit/${platform.id}`
-                      )
+                      navigate(`/backend/social-links/edit/${platform.id}`)
                     }
                   >
                     Edit

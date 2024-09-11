@@ -30,7 +30,7 @@ const PersonalInfo = () => {
           <div className="flex space-x-6">
             <h1 className="md:text-4xl text-2xl">Personal Info</h1>
             <button
-              onClick={() => navigate(`/admin-backend/personal-info/edit/${1}`)}
+              onClick={() => navigate(`/backend/personal-info/edit/${1}`)}
               type="button"
               id="add-skill"
               className="mr-10 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"

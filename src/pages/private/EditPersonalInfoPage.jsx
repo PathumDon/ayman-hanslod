@@ -70,7 +70,7 @@ const EditPersonalInfoPage = () => {
       .then((res) => {
         if (res.status === 200) {
           toast.success("Personal info updated successfully!");
-          navigate("/admin-backend/personal-info");
+          navigate("/backend/personal-info");
         } else {
           toast.error("Failed to update personal info.");
         }
@@ -348,7 +348,7 @@ const EditPersonalInfoPage = () => {
 
                 <button
                   type="button"
-                  onClick={() => navigate("/admin-backend/personal-info")}
+                  onClick={() => navigate("/backend/personal-info")}
                   className="ml-4 justify-center py-2 px-3 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-gray-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
                 >
                   Cancel
